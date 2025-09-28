@@ -98,4 +98,4 @@ class AppServer {
   }
 }
 
-new AppServer({ port: 3000 }).start();
+new AppServer({ port: process.env.PORT ? Number(process.env.PORT) : 3000 }).start();
